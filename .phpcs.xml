@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ruleset name="Custom Standard" >
+  <description>Our custom coding standard based on Drupal</description>
+  <rule ref="Drupal">
+    <exclude name="Drupal.Commenting"/>
+    <exclude name="Drupal.Classes.ClassFileName.NoMatch"/>
+    <exclude name="Drupal.Classes.InterfaceName.InterfaceSuffix"/>
+    <exclude name="Drupal.WhiteSpace.ScopeClosingBrace.Indent"/>
+    <exclude name="Drupal.NamingConventions.ValidFunctionName.ScopeNotCamelCaps"/>
+  </rule>
+</ruleset>
