@@ -1,22 +1,33 @@
 <?php
 
 /**
-  Class name subscribe: az inkább fügvénynévnek jó,
+  Tip: amikor class-t hozol létre, az általában előnyösebb
+  ha nem ige hanem főnév, tehát pl subscribe: az inkább fügvénynévnek jó,
   de a class-névnek inkább Subscription...
-
+  Nem kötelező, és nem megszeghetetlen dolog, csak egy ajánlás.
  **/
 
 
 class Subscription {
+  /*
+   * If you dont' declare properties, your code 1. will be slower. 2. all
+   * properties will be public. Dynamically declaring properties
+   * is an expensive operation. Remember to declare your properties always:
+   */
+  public $type = 'New';
 
-  // php 7.4 alatt igy kell:
-  // protected $gateway;
-
-  // php 7.4-ben lehet typed property class is vagy interface
-  // ez csak azért jön jól hogy ne tudjunk pl $this->gateway = 4;et csinálni
-  // If you dont' declare properties, your code 1. will be slower. 2. all
-  // properties will be public. Dynamically declaring properties
-  // is an expensive operation
+  /*
+   * php 7.4 alatt igy kell propertyt létrehozni pl:
+   * protected $gateway;
+   * az első a láthatóság, a második a property név... Értéket ha akarsz adsz
+   * hozzá ha akarsz nem.
+   */
+  protected $recepients;
+  /*
+   * php 7.4-ben és a fölött, lehet typed property class is vagy interface
+   * ez pl azért jön jól hogy ne tudjunk pl $this->gateway = 4;et csinálni
+   * ezzel force-oljuk hogy a $gatway csak gateway class példánya lehet:
+   */
   protected Gateway $gateway;
 
   /**
@@ -81,10 +92,12 @@ interface Gateway {
 }
 
 
-// object composition: compining types to build up a more complex objects
-// one class has a pointer to another class
-// ha object compositiont használunk akkor a különböző subcription
-// gatway-eket gatway-ként használjuk a Subscription class-ban.
+/*
+ * object composition: compining types to build up a more complex objects
+ * one class has a pointer to another class
+ * ha object compositiont használunk akkor a különböző subcription
+ * gatway-eket gatway-ként használjuk a Subscription class-ban.
+ */
 class MailchimpGateway implements Gateway {
 
   public function find_customer() {

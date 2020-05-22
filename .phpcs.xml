@@ -6,6 +6,10 @@
     <exclude name="Drupal.Classes.ClassFileName.NoMatch"/>
     <exclude name="Drupal.Classes.InterfaceName.InterfaceSuffix"/>
     <exclude name="Drupal.WhiteSpace.ScopeClosingBrace.Indent"/>
-    <exclude name="Drupal.NamingConventions.ValidFunctionName.ScopeNotCamelCaps"/>
+    <exclude name="Drupal.NamingConventions"/>
+  </rule>
+  <rule ref="PSR2">
+    <exclude name="PSR2.Namespaces.UseDeclaration.MultipleDeclarations"/>
+    <exclude name="PSR2"/>
   </rule>
 </ruleset>
