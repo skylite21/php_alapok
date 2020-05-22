@@ -1,5 +1,5 @@
 
-1. abstract class: abstract_class.php ✅
+1. abstract class:  ✅
 
 - extend: everywhere! ✅
 
@@ -15,17 +15,19 @@ use2: in callbacks... ✅
 
    visszatérési érték mi lehet, hogy lehet kideríteni a típusokat, mikor
    szállhatunk hibára
-5. Query building (akár optimus4, akár optimus5) and_where, or_where, join. Egy
+5. Query building (akár o4, akár o5) and_where, or_where, join. Egy
    kis vérfrissítés
 6. regex (vagy ez teljesen külön tanfolyam legyen?)
 7. refactor lehetőségek (esetleg egy konkrét projekt példáján. Megérteni, mit
    csinál a függvény, végiggondolni a logikát, mit lehet kiszervezni és
    refactoring) typehint megoldások, hogyan kommentezzünk egy függvényt, miként
-   tudja ezt használni a Storm
+   tudja ezt használni a Storm ✅
+   TODO: commentezések
+
 8. Exception: mikor dobjunk, mikor ne. Mit lehet vele kezdeni (deven kimegy,
    élesen email). Miért veszélyes egy 404 exception ilyenkor, stb.  Mi kerül
    logikailag egy modelbe és mi a controllerbe.
-9. Mire jó a decorator, mikor használjuk?
+9. Mire jó a decorator, mikor használjuk? ✅
 10. Valami olyasmi nagyon érdekes lenne, hogy hogyan lehet egy megoldás után
     kutatni. Ha nem ismerjük a függvényt, hogyan tudjuk kideríteni, hogy mit
     használhatunk, milyen lehetőségünk van. Majd ha beszélgetünk, mondok
@@ -34,11 +36,11 @@ use2: in callbacks... ✅
 
 
 - SOLID principles
-- indentation csökkentése (fölösleges else ágak, stb..)
-- iterator-ok
-- late static binding
-- object composition
-- self vs static
-- static functions
-- value objects
+- indentation csökkentése (fölösleges else ágak, stb..) ✅
+- iterator-ok  ✅
+- late static binding ✅
+- object composition ✅
+- self vs static ✅
+- static functions ✅
+- value objects ✅
 - what shows in the console
