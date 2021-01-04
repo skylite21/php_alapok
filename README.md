@@ -44,3 +44,26 @@ use2: in callbacks... ✅
 - static functions ✅
 - value objects ✅
 - what shows in the console
+
+gyarkorlat:
+php7.4-es property typehintek, strict typeing.
+arrow function
+spred operator
+yield
+null coalescing && null assigning coalescing operátor
+a php8nak is elébe lehet menni, kb fél év múlva jön ki
+elmélet:
+- A többség nem kapott felsőfokú IT képzést úgyhogy ide mehet bármilyen alapozó tárgyi anyag aminek van értelme phpban
+- a solid mint rövidítés mögötti elvek (SRP, OCP, LSP, stb).
+- objektum-objektum kapcsolatok (inheritance, composition, aggregation) melyik mikor miért
+- PSR-ek
+
+https://github.com/RefactoringGuru/esign-patterns-php
+
+- singleton
+- facade
+- factory
+- decorator
+- adapter
+- observer
+

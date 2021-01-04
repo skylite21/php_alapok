@@ -44,7 +44,7 @@ $user2 = new User();
 $user2->email = 'my@me.com';
 
 $users = new Collection([$user1, $user2]);
-// végig tudunk loop-olni a users-en pedig az egy object:
+// looping trough an object is possible now
 foreach ($users as $user) {
   echo $user->email . ' ';
 }
