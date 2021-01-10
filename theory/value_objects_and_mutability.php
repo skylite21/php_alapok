@@ -16,20 +16,13 @@ class Age {
    * oda már rakhatunk validációt
    */
   private $age;
-
   public function __construct($age) {
     if ($age < 0 || $age > 120) {
       throw new InvalidArgumentException('That makes no sense');
     }
-
     $this->age = $age;
-
   }
-
   public function increment() {
-    // mutable object
-    // $this->age += 1;
-    // inmutable object because it returns a new instance
     return new self($this->age + 1);
   }
 
