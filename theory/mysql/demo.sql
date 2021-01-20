@@ -7,18 +7,18 @@
 
 create database if not exists pdo;
 
--- unsigned: limits the stored data to positive numbers and zero
-create table if not exists rates (
+create table if not exists pdo.rates (
   rental_rate int,
+  -- unsigned: permit only nonnegative numbers in a column (doubles the possible positive values)
   id int unsigned auto_increment primary key
 );
 
-insert into rates
+insert into pdo.rates
 (rental_rate)
 values
 (100);
 
-create table if not exists users (
+create table if not exists pdo.users (
   first_name varchar(50) not null,
   last_name varchar(50) not null,
   user_name varchar(50),
@@ -26,57 +26,57 @@ create table if not exists users (
 );
 
 select first_name, last_name
-from users
+from pdo.users
 order by first_name desc;
 
 select first_name, last_name
-from users
+from pdo.users
 where id > 10;
 
 
 select first_name, last_name
-from users
+from pdo.users
 -- we could also use first_name > 'Peter' which means alphabetically after Peter
 where first_name = 'Zsolt'
 order by first_name desc;
 
 -- empty result set
 select first_name, last_name
-from users
+from pdo.users
 -- one = means equality comparsion, <> means not equal, but != also works
 where 1 = 2;
 
 -- aritmetic experssions are always best to use with parentheses () to avoid confusion
 
 select first_name as FirstName
-from users;
+from pdo.users;
 
-create table if not exists movies (
+create table if not exists pdo.movies (
   duration int,
   id int unsigned auto_increment primary key
 );
 
 
 select duration/60 as TimeInHour
-from movies;
+from pdo.movies;
 
-select (CAST(rental_rate as float) * 1.27) / 2 as TimeInHour from rates;
+select (CAST(rental_rate as float) * 1.27) / 2 as TimeInHour from pdo.rates;
 
-create table if not exists payment (
+create table if not exists pdo.payment (
   amount int,
   created DATETIME,
   id int unsigned auto_increment primary key
 );
 
-insert into payment (amount, created) values (233, '2020-01-1-23-23');
-insert into payment (amount, created) values (233, curdate());
-insert into payment (amount, created) values (233, now());
+insert into pdo.payment (amount, created) values (233, '2020-01-1-23-23');
+insert into pdo.payment (amount, created) values (233, curdate());
+insert into pdo.payment (amount, created) values (233, now());
 
 -- floor, ceiling etc...
 select round(amount) from pdo.payment;
 
 select concat(first_name, ' ', last_name) as FullName
-from users;
+from pdo.users;
 
 -- other string functions like reverse, replace are also possible...
 -- https://dev.mysql.com/doc/refman/8.0/en/string-functions.html
@@ -88,7 +88,7 @@ select amount,
   date_format(created, '%Y, %b, %d - %T: %f') as TheDate
 from pdo.payment;
 
-select amount FROM payment where created between '2020-12-01' and '2020-01-01 12:59:59';
+select amount FROM pdo.payment where created between '2020-12-01' and '2020-01-01 12:59:59';
 select amount FROM pdo.payment where created between '2020-12-01' and now();
 
 -- specific date format

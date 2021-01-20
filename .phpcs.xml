@@ -12,4 +12,7 @@
     <exclude name="PSR2.Namespaces.UseDeclaration.MultipleDeclarations"/>
     <exclude name="PSR2"/>
   </rule>
+  <rule ref="Zend">
+  <exclude name="Zend.Files.ClosingTag.NotAllowed" />
+  </rule>
 </ruleset>
