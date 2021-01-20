@@ -111,6 +111,7 @@ select count(distinct rental_rate) from pdo.rates;
 select count(rental_rate) from pdo.rates;
 
 -- When in doubt, use parenthesis! 
+-- logical operator precedence: not, and, or...
 -- https://dev.mysql.com/doc/refman/8.0/en/operator-precedence.html
 select * from pdo.rates
   where rental_rate = 100 and id < 5 or id > 20
