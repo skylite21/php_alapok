@@ -7,8 +7,8 @@
   <h3>Welcome <?php echo $_COOKIE['name'] ?></h3>
 <?php endif; ?>
 <?php
-if (isset($_POST['subscribe']))  {
-    setcookie('name', $_POST['name'], time()+60);
-    header("Location: ".$_SERVER["PHP_SELF"], true, 303);
-  }
+if (isset($_POST['subscribe'])) {  
+  setcookie('name', $_POST['name'], time()+60);
+  header("Location: ".$_SERVER["PHP_SELF"], TRUE, 303);
+}
 ?>

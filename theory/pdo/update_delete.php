@@ -8,7 +8,7 @@ $user = $con->prepare("
 
 $execution = $user->execute([
   'first_name' => 'Zsolt2',
-  'id' => 2
+  'id' => 2,
 ]);
 
 
@@ -18,7 +18,7 @@ $user = $con->prepare("
           ");
 
 $execution = $user->execute([
-  'id' => 1
+  'id' => 1,
 ]);
 
 $user = $con->prepare("
@@ -33,7 +33,7 @@ $user->execute([
   'user' => 'John',
   'email' => 'd@d.hu',
   'active' => 1,
-  'passworc' => 'sdf'
+  'passworc' => 'sdf',
 ]);
 
 $last_id = $con->lastInsertId();

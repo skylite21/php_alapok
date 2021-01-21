@@ -24,6 +24,7 @@ class Dog extends Animal {
 
   // must implement
   protected function eat() {
+    echo "hello";
   }
 
   public function bark() {

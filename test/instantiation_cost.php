@@ -7,11 +7,11 @@
 class FileManagerInstance {
 
   public function copyFile($current_file, $new_file) {
-    $result = FALSE;
-    if (file_exists($current_file)) {
-      $result = copy($current_file, $new_file);
-    }
-    return $result;
+	$result = FALSE;
+	if (file_exists($current_file)) {
+	  $result = copy($current_file, $new_file);
+	}
+	return $result;
   }
 
 }
@@ -19,11 +19,11 @@ class FileManagerInstance {
 class FileManagerStatic {
 
   public static function copyFile($current_file, $new_file) {
-    $result = FALSE;
-    if (file_exists($current_file)) {
-      $result = copy($current_file, $new_file);
-    }
-    return $result;
+	$result = FALSE;
+	if (file_exists($current_file)) {
+	  $result = copy($current_file, $new_file);
+	}
+	return $result;
   }
 
 }

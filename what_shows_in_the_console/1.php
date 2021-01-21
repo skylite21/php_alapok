@@ -6,7 +6,7 @@ $myarr = [
   'csd' => 5,
 ];
 
-echo ($myarr['asd'] . "\n");
+echo $myarr['asd'] . "\n";
 
 echo 'hello';
 
@@ -15,8 +15,7 @@ foreach ($myarr as $key => $value) {
   echo $key;
 }
 
-for ($i = 0; $i < count($myarr); $i++) {
+$arr_len = count($myarr);
+for ($i = 0; $i < $arr_len; $i++) {
   echo $myarr[array_keys($myarr)[$i]];
 }
-
-?>

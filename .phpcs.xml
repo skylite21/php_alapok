@@ -7,6 +7,8 @@
     <exclude name="Drupal.Classes.InterfaceName.InterfaceSuffix"/>
     <exclude name="Drupal.WhiteSpace.ScopeClosingBrace.Indent"/>
     <exclude name="Drupal.NamingConventions"/>
+    <exclude name="Drupal.WhiteSpace.OpenTagNewline.BlankLine"/>
+    <exclude name="Drupal.ControlStructures.ControlSignature.NewlineAfterCloseBrace"/>
   </rule>
   <rule ref="PSR2">
     <exclude name="PSR2.Namespaces.UseDeclaration.MultipleDeclarations"/>
@@ -14,5 +16,36 @@
   </rule>
   <rule ref="Zend">
   <exclude name="Zend.Files.ClosingTag.NotAllowed" />
+  <exclude name="Zend.NamingConventions.ValidVariableName" />
+  <exclude name="Zend.NamingConventions.ValidVariableName.NotCamelCaps" />
+  <exclude name="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore" />
+  <exclude name="Zend.NamingConventions.ValidVariableName.ContainsNumbers" />
+  <exclude name="Zend.NamingConventions.ValidVariableName.StringVarNotCamelCaps" />
+  </rule>
+  <rule ref="Squiz">
+  <exclude name="Squiz"/>
+  <exclude name="Squiz.Functions.GlobalFunction.Found"/>
+  <exclude name="Squiz.NamingConventions.ValidVariableName.NotCamelCaps"/>
+  <exclude name="Squiz.Commenting.FileComment.Missing"/>
+  </rule>
+  <rule ref="Generic">
+  <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine"/>
+  <exclude name="Generic.Files.InlineHTML.Found"/>
+  <exclude name="Generic.Files.OneInterfacePerFile.MultipleFound"/>
+  <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+  <exclude name="Generic.Arrays.ArrayIndent.KeyIncorrect"/>
+  <exclude name="Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed"/>
+  <exclude name="Generic.Files.EndFileNoNewline.Found"/>
+  <exclude name="Generic.PHP.RequireStrictTypes.MissingDeclaration"/>
+  <exclude name="Generic.PHP.ClosingPHPTag.NotFound"/>
+  <exclude name="Generic.Files.OneClassPerFile.MultipleFound"/>
+  <exclude name="Generic.Files.OneObjectStructurePerFile.MultipleFound"/>
+  <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"/>
+  <exclude name="Generic.NamingConventions.CamelCapsFunctionName.NotCamelCaps"/>
+  <exclude name="Generic.Formatting.SpaceAfterNot.Incorrect"/>
+  <exclude name="Generic.NamingConventions.CamelCapsFunctionName.ScopeNotCamelCaps"/>
+  </rule>
+  <rule ref="PEAR">
+  <exclude name="PEAR"/>
   </rule>
 </ruleset>

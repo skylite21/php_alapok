@@ -12,7 +12,8 @@ class A {
 
 }
 
-class B extends A {}
+class B extends A {
+}
 
 echo get_class(B::get_self()) . "\n";
 echo get_class(B::get_static()) . "\n";

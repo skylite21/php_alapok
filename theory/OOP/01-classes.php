@@ -28,9 +28,9 @@ class Team {
   }
 
   // variable number of arguments... 
-  public static function start(... $params) {
+  public static function start(...$params) {
     // argument unpacking (spread)
-    return new static(... $params);
+    return new static(...$params);
   }
 
   // getter

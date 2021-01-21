@@ -1,11 +1,11 @@
 <?php 
 
-$a = array(3,4,5);
+$a = [3, 4, 5];
 echo($a[2]."\n");
 
-$b = [4,5,6];
-$c = ['a', 2, true];
-$d = [[[3,4],'hello'],['foo', ["array", "is", "nested"], true]];
+$b = [4, 5, 6];
+$c = ['a', 2, TRUE];
+$d = [[[3, 4], 'hello'], ['foo', ["array", "is", "nested"], TRUE]];
 
 print ($d[0][1]);
 print ($d[1][0]);
