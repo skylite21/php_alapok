@@ -114,4 +114,52 @@ select count(rental_rate) from pdo.rates;
 -- logical operator precedence: not, and, or...
 -- https://dev.mysql.com/doc/refman/8.0/en/operator-precedence.html
 select * from pdo.rates
-  where rental_rate = 100 and id < 5 or id > 20
+where rental_rate = 100 and id < 5 or id > 20
+
+insert into pdo.users
+(first_name, last_name, user_name) values
+('Zsolt', 'Lengyel', 'skylite');
+
+insert into pdo.users
+(first_name, last_name, user_name) values
+('Béla', 'Kiss', 'fgr');
+
+insert into pdo.users
+(first_name, last_name, user_name) values
+('István', 'Kovács', 'ftrr2');
+
+insert into pdo.users
+(first_name, last_name, user_name) values
+('Gábor','Benke', 'ftrr2');
+
+select *
+from pdo.users
+where first_name in ('Béla', 'Zsolt');
+
+select *
+from pdo.users
+where id not in (1, 4);
+
+select customerName 
+from classicmodels.customers
+where customerNumber between 300 and 310;
+
+select customerName 
+from classicmodels.customers
+where customerName like 'al%';
+
+select customerName 
+from classicmodels.customers
+where customerName like '%' order by customerName;
+
+select customerName 
+from classicmodels.customers
+where customerName like 'b_a%';
+
+select customerName 
+from classicmodels.customers
+where customerName like 't%c%';
+
+select *
+from classicmodels.offices 
+where state is null;
