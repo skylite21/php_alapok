@@ -163,3 +163,11 @@ where customerName like 't%c%';
 select *
 from classicmodels.offices 
 where state is null;
+
+select *
+from classicmodels.products
+order by productVendor, productLine desc;
+
+
+
+
