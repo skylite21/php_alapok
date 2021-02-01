@@ -168,6 +168,28 @@ select *
 from classicmodels.products
 order by productVendor, productLine desc;
 
+select user_name, concat(first_name, ' ',last_name) as full_name
+from ecommerce.users
+order by concat(first_name, ' ', last_name);
 
+select user_name, concat(first_name, ' ',last_name) as full_name
+from ecommerce.users
+order by full_name;
 
+-- limit: limitálja a visszaadott sorok számát
+select *
+from classicmodels.payments
+order by customerNumber
+limit 10;
+
+-- a limitnek ha kettő paramétert adunk akkor az első paraméter az hogy honnan kezdje
+select *
+from classicmodels.payments
+order by customerNumber
+limit 10, 2;
+
+-- a 6odik még nem lesz benne, a kettő pedig az a kettő amelyik a 6odik után jön
+select *
+from ecommerce.users
+limit 6, 2;
 

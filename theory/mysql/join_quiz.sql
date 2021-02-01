@@ -61,7 +61,6 @@ inner join pdo.students on students.studentId = student_class.studentId;
 -- ha csak a név kell:
 select distinct pdo.students.StudentName
 from pdo.student_class
-inner join pdo.classes on classes.classId = student_class.classid
 inner join pdo.students on students.studentId = student_class.studentId;
 
 -- ki iratkozott fel csak matekra
